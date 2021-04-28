@@ -1,0 +1,1044 @@
+*
+{
+	/*Es un selector general para todos los elementos dentro 
+	del html*/
+	/*para que respete el ancho del elemento*/
+	box-sizing: border-box;
+}
+
+/*Quiero que al seleccionar un texto el color de fondo cambie 
+y también el color de texto
+#locales::selection Todo lo que seleccione dentro de locales 
+*/
+::selection
+{
+	background-color: #d0de55;
+	color: #fff;
+}
+
+html
+{
+	font-size: 0.94vw;
+	/*Aqui el font size en px sería 15px*/
+}
+
+body/*Selector por etiqueta*/
+{
+	/*font-family: 'Exo 2', sans-serif;*/
+	/*font-family: 'Lemonada', cursive;*/
+	font-family: 'Montserrat', sans-serif;
+	color: #545555; /*A todos los textos les pongo color*/
+	font-weight: 400;
+	font-size: 1rem; /*Se basa en el font-size del html*/
+}
+
+p{
+		font-family: 'Questrial', sans-serif;
+
+}
+
+a
+{
+	display: inline-block;
+}
+
+section /*Todos los section serán*/
+{
+	position: relative;
+}
+
+
+
+footer ul /*Para las etiquetas ul*/
+{
+	padding-left: 0; /*Todas las etiquetas ul tienen 
+	un padding, aquí lo quitamos. Tema1 Tema 2 Tma3
+	lo alineamos*/
+	list-style: none; /*Para quitar los puntos a Tema 1, tema 2, tema 3*/
+	margin: 0; /*quito el margen que dan los navegadores a los iconos*/
+}
+
+
+footer ul li/*Para las etiquetas ul*/
+{
+	margin-bottom: 1rem; /*Para que no estén tan pegados los pixeles*/
+}
+
+
+
+footer a
+{
+	color: white;
+}
+
+footer .redes /*Para las etiquetas ul*/
+{
+	font-size: 2.2rem;
+	display: flex; /*para que los iconos de redes sociales esten una junto 
+	a la otra*/
+	/*justify-content: space-between;*//*Para dar un espacio igual 
+	entre cada icono*/
+}
+
+footer .redes a 
+{
+	margin: 0 0.5rem; /*los margenes de un lado y otro suman 15*/
+}
+
+footer .barra-footer
+{
+	text-align: center;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+							table/*Forma de la tabla*/
+					        {
+					            border: 0 solid #ccc;
+					            border-collapse: collapse;
+					           
+
+
+					        }
+					        table th /*Titulos de la tabla*/
+					        {
+					            background-color: #F7F7F7;
+					            color: #F7F7F7;
+					            font-weight: bold;
+					           
+	
+					        }
+					        /*table th, */
+					        table td /*Tamaño y contenido de cada columna y fila*/
+					        {
+					        	
+					           /* padding: 0.25rem;*/
+					            border: 0.02rem solid #ccc;
+					            background-color: #ff0067;
+					        }
+					        table img
+					        {
+					            height: 7.5rem;
+         						width: 7.5rem;
+					        }
+
+.cabecera
+{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #fff; /*Color de fondo cabecera*/
+	/*background-color: rgb(27 29 39);*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 999; /*Como section ve que el hader no ocupa un espacio en el flujo, 
+	el section se pone sobre el header. Para que el header se ponga encima del section le 
+	debo poner s la cabecera un z-index alto*/
+}
+
+.cabecera .container /*Para no generar errores en el container principal 
+tomo solo el container dentro de la cabecera */
+{
+	display: flex;
+	align-items: center; /*Alinea segun el eje y*/
+	justify-content: space-between; /*Un elemento se va a un lado y el otro al otro, y el tercero en el medio. Todos los elelentos se separan sin espacios a los extremos */
+
+}
+
+.cabecera .link-logo /**/
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.cabecera .link-logo .logo/**/
+{
+	width: 5.5rem; /*90px;*/
+	height: auto;
+}
+
+.cabecera .menu /*MEnu*/
+{	/*Para que un elemento este a un lado y otro al otro lado
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 60%; */
+	/*Una forma más sana es usar FLEX */
+
+	/*position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(27 29 39);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;*/
+
+}
+
+/*nav a :slecciono todos los a que están dentro del nav*/
+/*todos los A que estan dentr un elemento con clase menu y que es contenida por otro eemento con clase cabecera  */
+.cabecera .menu a
+{
+	margin-left: 0.5rem; /*7.5px;*/
+	margin-right: 0.5rem; /*7.5px;*/
+	color: #545454;
+	/*color: rgba(168, 209, 83,1);*/
+	font-size: 0.9rem; /*13px;*/
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.15rem; /*2px;*/
+	word-spacing: 0.3rem; /*5px;*/
+	transition: all 0.5s ease; /*Transición: 
+	All: Cualquier propiedas que en el estado B va a cambiar
+	Tiempo de transición de un estado a otro: 1.5s
+	retardo de la tran: 0.5s
+	Tipo de transición: ease, ease-in-out*/
+
+}
+
+.menu-dos a
+	{
+		margin-left: 0.5rem; /*7.5px;*/
+		margin-right: 0.5rem; /*7.5px;*/
+		margin-bottom: 1rem;
+		color: #545454;
+		/*color: rgba(168, 209, 83,1);*/
+		font-size: 0.9rem; /*13px;*/
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 0.15rem; /*2px;*/
+		word-spacing: 0.3rem; /*5px;*/
+		transition: all 0.5s ease; /*Transición: */
+	}
+
+.cabecera .menu a:hover /*Para iluminar las opciones de menú*/
+{
+	color: #fff;
+	background-color:#ff0067;
+}
+
+.cabecera .menu a:first-child /*El primer hijo "a"*/ 
+{
+	margin-left: 0;
+}
+
+
+/*Un color para impar
+.cabecera .menu a:nth-child(odd) 
+{
+	background-color: yellow;
+}
+/*Un color para par
+.cabecera .menu a:nth-child(even) 
+{
+	background-color: yellow;
+}*/
+/* .cabecera .menu a:last-child El ultimo hijo "a"
+{
+	margin-right: 0;
+}
+
+.cabecera .menu a:first-of-type El primer hijo de tipo de "a"
+{
+	margin-left: 0;
+}
+
+.cabecera .menu a:first-of-type El ultimo tipo de "a" 
+{
+	margin-right: 0;
+}*/
+
+/*.cabecera .menu a:visited Cambiar el color de las páginas visitadas
+{
+	color: #daffcc;
+}*/
+
+
+/*
+.cabecera .menu a[target=_blank] /*Selecciona a aquellos "a" que tienen target=blank*/
+/*{
+	color: red;
+}
+.cabecera .menu a[href*='#'] /*Dentro del href necesito que me busques a alguno que tenga "#"
+el ^ es usado para indicar una busqueda que contiene un # en cualquier parte*/
+/*{
+	color: blue;
+}
+.cabecera .menu a[href^='#'] /*Dentro del href necesito que me busques a alguno que tenga "#"
+el ^ es usado para indicar una busqueda que empieza por una palabra especifica*/
+/*{
+	color: green;
+}*/
+
+.cabecera .hamb
+{
+	color: rgba(255, 0, 103,1);
+	font-size: 2.8rem; /*40px;*/
+	display: none; /*Para usarlo en mobile*/
+
+}
+
+.container
+{
+	/*para que se coloque en medio con un tamaño fijo:
+	width: 1170px; */
+	width: 85.74%; /*Lo manejamos en % para que le tamaño del contenedor se ajuste segun 
+	el tamaño de la pantalla*/
+	/*Padding: Espacio desde el borde hacia adentro
+	Espacio que hay en el exto o contenido y sus bordes.
+	Espaciado interno, con 4 valores de manera horaaria, a
+	arriba, derecha, abajo, izquierda 
+	padding: 0 15px 0 15px;
+	ó 
+	arribayabajo con izquieraYderecha: padding: 0 15px*/
+	padding: 0 1rem; /*0 15px;*/
+	margin: 0 auto; /*Espacio que se pone a la izquierda y derecha después del padding*/
+}
+
+/*container que abarca todo el ancho de la pantalla*/
+
+.container-full
+{	
+	width: 100%; /*contenedor de extremo  extremo*/
+	padding: 0 1rem; /*15px;*/
+}
+
+.fila /*Para mantener el padding dentro de las columnas.
+y como estas estan dentro de una clase fila, le restamos el padding con fila 
+para no quitarselos de columna*/
+{
+	margin-left: -1rem; /*-15px;*/
+	margin-right: -1rem; /*-15px;*/
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.fila.fila-centrada
+{
+	justify-content: center;
+}
+
+.cabecera .menu i 
+{
+	font-size: 1rem; /*40px;*/
+	color: #ff0067;
+}
+
+.columna
+{
+	padding-left: 1rem; /*15px;*/
+	padding-right: 1rem; /*15px;*/
+
+
+	/* SIN FLEXBOX 
+	display: inline-block; /*Unimos las columnas una junto a la otra/
+	/*Como todos los elementos inlone o inleblock tienen un espacio entre cada uni
+	lo que hago es darle margin-left*/
+	/* margin-left: -2.6px;
+	margin-right: : -2.6px; /*Como hay un espacio entre ellos usamos margin negativo*/
+	/* vertical-align: top; /*alinearlo verticalmente*/
+
+
+}
+
+.columna-100
+{
+	width: 100%;
+}
+
+.columna-50
+{
+	width: 50%;
+}
+
+.columna-41
+{
+	width: 41.66%;
+}
+
+.columna-33
+{
+	width: 33.33%;
+}
+
+
+.columna-25
+{
+	width: 25%;
+}
+
+
+.columna-16
+{
+	width: 16.66%;
+}
+
+.columna-8
+{
+	width: 8.3%;
+}
+
+.orden
+{
+	order: 4;
+}
+
+.orden2
+{
+	order: -1;
+}
+
+.sin-padding
+{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.contenedor-cuadrado
+{
+	/*Para crear un cuadrado uso width y padding-bottom,
+	esto para generar un espacio dentro*/
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+	overflow: hidden; /*Para esconder el contenido del texto y boton*/
+	background-color: rgb(27 29 39);
+	cursor: pointer; /*Cambiar icono de mouse: Para que aparezcan la manito sobre una imagen*/
+}
+
+.contenedor-cuadrado.cont-cuadrado
+{
+	/*NEcesito que medidas para que sean rectangulos 
+	o 16.9 : 56.25%*/
+	padding-bottom: 56.25%;
+}
+
+.contenedor-cuadrado img
+{
+	position: absolute; /*Debemos darle una de las 5 propi*/
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /*Trabajar con el objeto o imagen y tratar de cubrir todo el espaio en el que se enuentra.
+	Se puede usar con img o vid. 
+	Necesito cubrir la imagen en todo el espacio donde está*/
+	object-position: center; /*Donde quiero que se ubique la imagen*/
+	/*opacity: 0.75;
+	filter: grayscale(1); /*Los pongo en blanco y negro para ue al pasar el mouse se active el color*/
+}
+
+.contenedor-cuadrado .contenido-cuadrado
+{
+	position: absolute; /*Debemos darle una de las 5 propi*/
+	text-align: center;
+	width: 100%;
+	padding-right: 2rem; /*30px;*/
+	padding-left: 2rem; /*30px;*/
+	top: -100%;
+	color: #fff;
+
+}
+
+.contenedor-cuadrado .contenido-cuadrado h2
+{
+	margin-top: 0;
+
+}
+
+
+.seccion
+{
+	padding-top: 4rem; /*60px;*/
+	padding-bottom: 4rem; /*60px;*/
+}
+
+.centrar-texto
+{
+	text-align: center;
+}
+
+.inclinar--texto
+{
+	font-style: italic;
+}
+
+.justificar-texto
+{
+	text-align: justify;
+}
+
+.video-fondo
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /*cubre todo*/
+	object-position: center;
+	z-index: 1;
+	filter: grayscale(1);
+	opacity: 0.5;
+
+}
+
+.importante
+{
+	font-style: italic;
+}
+
+
+.titulos
+{
+	margin-top: 0; /*Quito eol magin top que tienen los h2 por defecto*/
+	padding-bottom: 0.8rem; /*40px;*/
+	text-align: center;
+	font-size: 2.8rem; /*40px;*/
+	text-shadow: 0.3rem -0.3rem 0.07rem #ff006761; /*2px -2px 1px #d9ed92;*/
+	position: relative;
+	padding-top: 1rem; /*Espacio interno desde la parte de arriba*/
+	display: inline-block;
+	/*padding: Se coloca a los dos lados para que np se vea descuadrado:*/
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.titulos::before
+{
+	position: absolute;
+	top: 0;
+	width: 3rem;
+	left: 50%; 
+	height: 0.13rem;
+	background-color: #ff0067;
+	margin-left: -1.5rem; /*Lo usamos para centrar 
+	el elemento, retrocede 1.5 rem en base al ancho que tiene
+	pero solo funciona cuando se conoce 
+	el ancho del elemento*/
+	content: " "; /*Esto debe ir para que aprezca la linea, puede ir cualquiier letra*/
+}
+
+.titulos::after
+{
+	position: absolute;
+	top: 0;
+	width: 0.13rem;
+	left: 0; 
+	height: 50%;
+	background-color: #ff0067;
+	
+	content: " "; /*Esto debe ir para que aprezca la linea, puede ir cualquiier letra*/
+}
+.margin-arriba
+{
+	margin-top: 2.8rem; /*40px;*/
+}
+
+
+
+.btn
+{
+	padding: 0.8rem 2rem; /*10px 30px;*/
+	font-size: 16px;
+	text-decoration: none; /**/
+	text-align: center;
+	border-radius: 15px; /*A todos los lados al mismo tiempo les de un 
+	Para poner un poco circular el boton*/
+	border-width: 2px;
+	border-style: solid;
+	transition: all 0.5s ease;
+
+}
+
+.btn-circulo
+{
+	/*Si quiero distribuir bien un ext, letra o número.
+	Y si le pones display-FLEX a un p, flex asume que el texto e suna etiqueta imaginaria y lo acomoda sin problema */
+
+	width: 2.8rem; /*40px;*/
+	height: 2.8rem; /*40px;*/
+	display: inline-flex; /*Para centrar el icono lupa: Alinea los contenidos que tiene dentro pero al tiempo es un elemento alineado*/
+	align-items: center;
+	justify-content: center;
+	padding: 0.3rem; /*5px;*/
+	font-size: 1.3rem; /*20px;*/
+	border-radius: 100%;
+	border-width: 0.15rem; /*2px;*/
+	border-style: solid;
+	text-decoration: none; 
+	transition: all 0.5s ease;
+}
+
+.btn-circulo.borde-blanco
+{
+	color: #fff;
+	border-color: #fff;
+}
+
+.btn-circulo.borde-blanco:hover
+{
+	background-color: #fff;
+	color: #555e7b;
+}
+
+.btn.boton-transparente /*Cuando tenemos dos clases juntas
+quiere decir que el elemento tiene esas dos clases juntas al mismo tiempo*/
+{
+	background-color: transparent;
+	border-color: #FDE47F;
+	color: #FDE47F;
+}
+
+.btn.boton-transparente:hover /*Cuando tenemos dos clases juntas
+quiere decir que el elemento tiene esas dos clases juntas al mismo tiempo*/
+{
+	background-color: #FDE47F;
+	border-color: #FDE47F;
+	color: #fff;
+	
+
+}
+
+.btn.boton-amarillo
+{
+	border-color: #f5ae22;
+	background-color: #f5ae22;
+	color: #F5634A;
+
+}
+
+.btn.boton-amarillo:hover
+{
+	border-color: #F5634A;
+	background-color: #F5634A;
+	color: #f5ae22;
+
+}
+
+.btn.boton-portafolio
+{
+	margin-top: 2rem;
+	background-color: #ff0067;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.btn.boton-portafolio:hover
+{
+	background-color: #fff;
+	color: #ff0067;
+
+}
+
+.btn.boton-mas
+{
+	background-color: #ff0067;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.btn.boton-mas:hover
+{
+	background-color: #fff;
+	color: #ff0067;
+
+}
+
+.sliderimages
+{
+	width: 100%;
+}
+
+#banner
+{
+	background-color: #000;
+	/*height: 100vh; /*Para que la imagen este dentro de lo que estoy viendop en la compu*/
+	height: calc(100vh - 100px); /*los 7rem o 100px son del menu, esto para restar el tamaño del menu menos el alto total*/
+}
+
+#banner .banner-home
+{
+	width: 100%;
+	height: 100%;
+	display: block; /*como la imagen es alineada, al 
+	colocar una imagen abajo va a quedar un espaciado bajo la imagen
+	por eso añadimos el block para que se comporte como block y elimine el espaciado */
+	background-color: #ff0067;
+	opacity: 0.6; /*Le doy opacidad solo a la imagen*/
+	object-fit: cover; /*Para que cubra todo*/
+	object-position: center;
+
+
+	
+}
+
+#banner .container
+/*al container que esta dentro del banner*/
+{
+	position: absolute; /*Para pode rponer el container como absoluto, la seccion con id banner debe ser relativa
+	para que la seccion ocupe un espacio */
+	top: 35%; /* Colococo los elementos apartir del porcentaje. lo ubico desde el inicio de la web, hasta la mitad del bloque de la imagen, NO del elemento*/
+	/*lo ponemos en 0 en la ziquierda para que lo jale a la izquierda
+	y right 0 para que lo jale a la derecha, de esa forma centramos el contenido*/
+	left: 0;
+	right: 0; 
+}
+
+#banner .container h1
+{
+	font-size:4.8rem; /*70px; /*Tendencia*/
+	color: #fff;
+	margin: 0; /*Le quito el margen que tienen por defecto los h1*/
+	
+	/* color: transparent;
+	-webkit-text-stroke: 1px #fff;*/
+	
+	/*text-shadow: 
+	0 0 #000,
+	-1px 0 #000,
+	1px 0 #000,
+	1px 1px #000,
+	-1px -1px #000,
+	-1px 1px #000,
+	1px -1px #000,
+	0 -1px #000,
+	0 1px #000; */
+}
+
+#banner .container p
+{
+	font-size: 1.3rem; /*20px; /*Tendencia*/
+	color: #fff;
+	line-height: 1.5; /*Para un salto de liena*/
+}
+
+
+#formas .lineas i
+{
+	display: inline-flex; 
+	margin-top: 1rem;
+	color: #ff0067;
+	margin-bottom: 1rem;
+	letter-spacing: 2rem; 
+	align-items: center;
+	justify-content: center;
+}
+
+#formas a
+{
+		text-decoration: none;
+}
+
+#musicacool
+{
+	/*background-image: url("../img/trama2.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;*/
+	background-color: #6c584c;
+	background-image: url("../img/trama2.svg");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	
+}
+
+#musicacool .titulos
+{
+	color: #cddc49;
+	text-shadow: 0.3rem -0.3rem 0.07rem rgba(255,255,255,0.5);
+	/*2px -2px 1px rgba(255,255,255,0.5);*/
+}
+
+#musicacool .titulos::before,
+#musicacool .titulos::after
+{
+	background-color: #cddc49;
+}
+
+
+#locales
+{
+
+}
+
+/*Todos los ul que estan dentro de locales*/
+#locales ul
+{	padding-left: 0; /*Quito espacio a la izquierda o quito el */
+	/*list-style-position: inside; /*No quiero ningun estlo de lista, quito el bulet*/
+	/*list-style-type: none;
+	list-style-image: url(../img/lista.png);
+	line-height: 1; /*Alto de linea*/
+	/*columns: 3; /*Para que la lista este dividida en 3 columnas*/
+
+}
+
+
+#servicios 
+{
+
+}
+
+#servicios .contenedor-serv
+{
+	text-align: center; /*El texto se alinea al centro*/
+	background-color: rgba(255, 0, 109,0.88);
+	padding: 2rem; /*30px; /*Pading interno para qye tenga un respiro*/
+	/*Para que todos tengan el mismo alto: como sabemos que estamos usando flex, 
+	y todas las columnas estan alineadas con alig-item-strench, es decir toman el alto de la columna que más contenido tiene
+	Tomo el 100% de alto de la columna que tiene más contenido*/
+	height: 100%;
+	border-radius: 1rem; /*15px;
+	/*box-shadow: 1px 1px 20px 0px #2d6a4f; /*rgba(230, 120, 0, 0.75)*/
+}
+
+#servicios .contenedor-serv p,
+#servicios .contenedor-serv h3 
+{
+	color: #fff;
+}
+
+#servicios .contenedor-serv i 
+{
+	font-size: 2.8rem; /*40px;*/
+		color: #fff;
+
+}
+
+#testimonio
+{
+	/*El padre Debe ser relativo porque quiero que la seccion ocuopoe un espacio dentro del flujo*/
+	position: relative;
+	background-color: #1b4332;
+	color: #fff;
+	line-height: 1.5;
+}
+
+#testimonio .titulos::before,
+#testimonio .titulos::after
+{
+		background-color: #fff;
+}
+
+#testimonio p
+{
+	margin-bottom: 0;
+}
+
+#testimonio p::first-letter
+{
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+
+
+
+#testimonio .trama-video
+{
+	/*El padre Debe ser relativo porque quiero que la seccion ocuopoe un espacio dentro del flujo*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	/*Para usar el gradiente usamos el background o background-image*/
+	background-image: linear-gradient(to bottom right , #081c15 20%, rgba(255 0 103 / 38%) 80%);
+	/*Para usar una imagen*/
+	/*	background-image: linear-gradient(to bottom right , #081c15 50%, rgba(255 0 103 / 38%) 80%),
+		url("../img/imagen2.jpg") ;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed; */
+
+
+}
+
+#testimonio .container
+{
+	/*El container debe tener un z index 3, porque aparte del texto colocaré otro elemento*/
+	z-index: 3;
+	position: relative;
+
+}
+
+@media (min-width: 1200px)
+{
+
+}
+
+@media /*(min-width: 992px) and */ (max-width: 1199px)/*Hasta 1999*/
+{
+	.container
+	{
+		/*No podemos darle tamaño fijo porque no sabemos el tamaño especifico de cada celu
+		Todo lo que vamos a trabajr aqui es con porcentaje*/
+		width: 960px;
+		
+	}
+
+}
+
+@media /*(min-width: 767 ) and */ (max-width: 991px)
+{
+	.container
+	{
+		/*No podemos darle tamaño fijo porque no sabemos el tamaño especifico de cada celu
+		Todo lo que vamos a trabajr aqui es con porcentaje*/
+		width: 750px;
+		
+	}
+}
+
+@media (max-width: 767px) /*and (orientation: landscape)y que al tiempo sea un movil horizontal
+/*Rango que abarca todos los tamaños hasta 767*/
+{	
+	html
+	{
+		font-size: 4vw;  
+	}
+
+	.container
+	{
+		/*No podemos darle tamaño fijo porque no sabemos el tamaño especifico de cada celu
+		Todo lo que vamos a trabajr aqui es con porcentaje*/
+		width: 100%;
+		
+	}
+	.columna-mb-100
+	{
+		width: 100%;
+	}
+
+	.columna-mb-50
+	{
+		width: 50%;
+	}
+
+	.columna-mb-41
+	{
+		width: 41.66%;
+	}
+
+	.columna-mb-33
+	{
+		width: 33.33%;
+	}
+
+
+	.columna-mb-25
+	{
+		width: 25%;
+	}
+
+
+	.columna-mb-16
+	{
+		width: 16.66%;
+	}
+
+	.columna-mb-8
+	{
+		width: 8.3%;
+	}
+
+	.orden
+	{
+		order: 0;
+	}
+
+	.titulos
+	{
+		font-size: 2.5rem; /*40px;*/
+	}
+
+	.cabecera .hamb
+	{
+		display: block;
+		
+	}
+
+	.cabecera .link-logo .logo
+	{
+    width: 3.5rem;/*50px;*/
+    height: auto;
+	}
+
+	.cabecera .menu /*MEnu*/
+	{	/*Para que un elemento este a un lado y otro al otro lado
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 60%; */
+		/*Una forma más sana es usar FLEX */
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(27 29 39);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		display: none;
+
+	}
+
+	
+	.seccion
+	{
+		padding-bottom: 2.8rem; /*40px; /*para quitar tanto espacios*/
+		padding-top: 2.8rem; /*40px;*/
+	}
+
+	#banner
+	{
+		/* height: 100vh; alto de la parte visual del celu o viewport*/
+	}
+
+	#banner .container h1
+	{
+		font-size: 4rem; /*60px;*/
+	}
+
+	#banner .container
+	{
+		top: 30%;
+	}
+
+	#servicios .contenedor-serv 
+	{
+		height: auto;
+		margin-bottom: 1rem; /*30px;*/	
+	}
+}
+
+/*
+@media (min-width: 768px)
+{
+	/*min-width: 768px: Desde 768, medida de ancho para
+	tablet. Todo lo que va aqui se reconoce para tablet 
+}
+
+@media (min-width: 992px)
+{
+	/*min-width: 991: Para una tablet echada  o landscape
+}
+
+
+@media (min-width: 1200px)
+{
+	/*min-width: 1200: Para un desktop  
+}
+*/

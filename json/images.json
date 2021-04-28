@@ -1,0 +1,15 @@
+var images = [
+				{
+					'url' : '../img/imagen1.jpg',
+				},
+				{
+					'url' : '../img/imagen2.jpg',
+				},
+				{
+					'url' : '../img/imagen3.jpg',
+				},
+				{
+					'url' : '../img/imagen4.jpg',
+				}
+
+				]
